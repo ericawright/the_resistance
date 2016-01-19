@@ -13,9 +13,8 @@ public class StartGameActivity extends AppCompatActivity {
         setContentView(R.layout.activity_start_game);
 
         Intent intent = getIntent();
-        String number = intent.getStringExtra("PlayerNum");
-//        String number = intent.getStringExtra(SetUpActivity.PlayerNum);
+        int intValue = intent.getIntExtra("PlayerNum", 0);
         TextView textView = (TextView) findViewById(R.id.numPlayers);
-        textView.setText(number);
+        textView.setText(String.valueOf(intValue));
     }
 }
