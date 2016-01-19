@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.NumberPicker;
 
 public class SetUpActivity extends AppCompatActivity {
+//    public final static String PlayerNum;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,8 +23,11 @@ public class SetUpActivity extends AppCompatActivity {
     }
 
     public void openStartGameActivity(View view) {
+        NumberPicker np= (NumberPicker) findViewById(R.id.numberPicker);
+        String value = String.valueOf(np.getValue());
         Intent intent = new Intent(this, StartGameActivity.class);
+        intent.putExtra("PlayerNum", value);
         startActivity(intent);
-
     }
 }
+
