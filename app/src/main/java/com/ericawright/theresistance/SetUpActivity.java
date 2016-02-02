@@ -17,7 +17,7 @@ public class SetUpActivity extends AppCompatActivity {
         setContentView(R.layout.activity_set_up);
         NumberPicker np= (NumberPicker) findViewById(R.id.numberPicker);
         np.setMaxValue(9);
-        np.setMinValue(0);
+        np.setMinValue(4);
         np.setWrapSelectorWheel(false);
     }
 
